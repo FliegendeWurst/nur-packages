@@ -8,7 +8,7 @@
 
 { pkgs ? import <nixpkgs> { } }:
 
-{
+rec {
   # The `lib`, `modules`, and `overlay` names are special
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
@@ -28,4 +28,8 @@
     inherit (pkgs.darwin.apple_sdk.frameworks) Security;
   };
   thumbs = pkgs.callPackage ./pkgs/thumbs { };
+  tmux-thumbs = pkgs.callPackage ./pkgs/tmux-thumbs {
+    inherit (pkgs.tmuxPlugins) mkTmuxPlugin;
+    inherit thumbs;
+  };
 }
