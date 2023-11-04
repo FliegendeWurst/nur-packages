@@ -27,4 +27,5 @@
   ripgrep-all = pkgs.callPackage ./pkgs/ripgrep-all {
     inherit (pkgs.darwin.apple_sdk.frameworks) Security;
   };
+  thumbs = pkgs.callPackage ./pkgs/thumbs { };
 }
