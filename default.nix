@@ -17,6 +17,7 @@ rec {
   diskgraph = pkgs.callPackage ./pkgs/diskgraph { };
   freqtop = pkgs.callPackage ./pkgs/freqtop { };
   jerboa-editor = pkgs.callPackage ./pkgs/jerboa-editor { };
+  jerboa-studio = pkgs.callPackage ./pkgs/jerboa-studio { };
   map = pkgs.callPackage ./pkgs/map { };
   microsoft-ergonomic-keyboard = pkgs.callPackage ./pkgs/microsoft-ergonomic-keyboard {
     kernel = pkgs.linuxPackages.kernel;
